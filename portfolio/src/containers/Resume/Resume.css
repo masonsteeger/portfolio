@@ -1,0 +1,15 @@
+.resume{
+    box-shadow: 0 0 20px black;
+    width: 600px;
+    height: 800px;
+}
+
+.certificates{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cert{
+    margin: 20px;
+    box-shadow: 0 0 20px black;
+}
