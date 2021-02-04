@@ -44,18 +44,20 @@ const Projects = () => {
 
 
     return (
-    <div className="projects">
-        {projects.map( (project) => {
-            return <Project 
-                key={project.id}
-                title={project.name}
-                gif={project.gif}
-                description={project.description}
-                link={project.link}
-            />
-        })}
-
-    </div>
+    <React.Fragment>
+        <h1>Projects</h1>
+        <div className="projects">
+            {projects.map( (project) => {
+                return <Project 
+                    key={project.id}
+                    title={project.name}
+                    gif={project.gif}
+                    description={project.description}
+                    link={project.link}
+                />
+            })}
+        </div>
+    </React.Fragment>
     );
 };
 

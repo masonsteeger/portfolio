@@ -26,6 +26,7 @@
 }
 .description {
     font-size: 28px;
+    margin: 10px;
 }
 
 .hover-text:hover {
