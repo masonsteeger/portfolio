@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Bio.css'
 
-const Bio = () => {
+const Bio = (props) => {
     return (
     <div className="bio">
         <h1>Bio</h1>

@@ -2,7 +2,7 @@ import React from 'react';
 import Project from '../../components/Project/Project'
 import './Projects.css'
 
-const Projects = () => {
+const Projects = (props) => {
     const projects = [
         {
             id: 1,
@@ -44,7 +44,7 @@ const Projects = () => {
 
 
     return (
-    <React.Fragment>
+    <div>
         <h1>Projects</h1>
         <div className="projects">
             {projects.map( (project) => {
@@ -57,7 +57,7 @@ const Projects = () => {
                 />
             })}
         </div>
-    </React.Fragment>
+    </div>
     );
 };
 
