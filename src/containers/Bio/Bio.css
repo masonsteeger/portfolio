@@ -46,12 +46,12 @@
     
     .images{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 0 10px 0 10px;
     }
     
     .images > img{
-        width: 40vw;
-        height: auto;
+        width: 110px;
+        height: 110px;
     }
 }
