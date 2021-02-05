@@ -11,8 +11,16 @@
     font-size: 66px;
 }
 
+.subtitle{
+    font-size: 46px;
+}
+
 @media only screen and (max-width: 812px){
     .project-title{
         font-size: 46px;
+    }
+
+    .subtitle{
+        font-size: 26px;
     }
 }

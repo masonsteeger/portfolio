@@ -46,6 +46,7 @@ const Projects = (props) => {
     return (
     <div>
         <h1 className="project-title">PROJECTS</h1>
+        <h3 className="subtitle">Click to learn more and view the project!</h3>
         <div className="projects">
             {projects.map( (project) => {
                 return <Project 
