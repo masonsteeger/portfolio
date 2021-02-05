@@ -1,2 +1,1 @@
-# portfolio
-Re-vamp of my portfolio
+Revamp of my portfolio
