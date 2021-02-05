@@ -10,3 +10,9 @@
 .project-title{
     font-size: 66px;
 }
+
+@media only screen and (max-width: 812px){
+    .project-title{
+        font-size: 46px;
+    }
+}

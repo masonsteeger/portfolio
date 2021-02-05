@@ -50,14 +50,14 @@ const Resume = (props) => {
     }else{
         return (
             <div className='resume-container'>
-                <h1 style={{fontSize: "66px", marginTop: "0"}}>RESUME</h1>
+                <h1 style={{fontSize: "46px", marginTop: "0"}}>RESUME</h1>
                 <div >
-                    <Document file={MyResume} ><Page width={320} pageNumber={1}/></Document>
+                    <Document file={MyResume} ><Page width={window.innerWidth - 40} pageNumber={1}/></Document>
                 </div>
                 <h2>CERTIFICATES</h2>
                 <div className="certificates">
-                    <Document className="cert" file={GenAss}><Page width={320} pageNumber={1} /></Document>
-                    <Document className="cert" file={ReactCert}><Page width={320} pageNumber={1} /></Document>
+                    <Document className="cert" file={GenAss}><Page width={window.innerWidth - 40} pageNumber={1} /></Document>
+                    <Document className="cert" file={ReactCert}><Page width={window.innerWidth - 40} pageNumber={1} /></Document>
                 </div>
             </div>
             );

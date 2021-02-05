@@ -33,7 +33,7 @@
     box-shadow: 0 0 20px black;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 812px){
     
     .resume{
         padding: 0;

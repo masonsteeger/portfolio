@@ -31,24 +31,17 @@
     box-shadow: 0 0 20px black;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 812px){
     .bio {
         width: 95%;
-        height: auto;
-        margin: auto;
-        margin-bottom: 50px;
-        background-color:  rgba(255, 224, 181, 0.5);
-        border-radius: 20px;
-        box-shadow: 0 0 20px black;
     }
     
     .bio > h1{
-        font-size: 66px;
+        font-size: 46px;
     }
     
     .bio > p {
         font-size: 18px;
-        font-weight: bold;
     }
     
     .images{
@@ -59,8 +52,5 @@
     
     .images > img{
         width: 48%;
-        margin: 40px 0;
-        border-radius: 20px;
-        box-shadow: 0 0 20px black;
     }
 }

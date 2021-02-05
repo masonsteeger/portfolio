@@ -26,7 +26,7 @@ const Project = (props) => {
             {isHover && <div className="hover-text">
                 <h2 
                     onClick={() => openLink(props.link)} 
-                    className="title-1">{props.title}
+                    className="proj-title">{props.title}
                     </h2>
                 <h5 
                     className="description">
