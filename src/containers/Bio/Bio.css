@@ -51,7 +51,6 @@
     }
     
     .images > img{
-        width: 48%;
-        height: auto;
+        width: 40vw;
     }
 }
