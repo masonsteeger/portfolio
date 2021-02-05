@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 import MyResume from '../../media/resume.pdf'
-import GA from '../../media/ga-cert.pdf';
+import GenAss from '../../media/ga-cert.pdf';
 import ReactCert from '../../media/react-cert.pdf'
 import Modal from '../../components/Modal/Modal'
 import { pdfjs } from 'react-pdf';
@@ -30,14 +30,17 @@ const Resume = (props) => {
         setModalDisplay({display: 'none'})
     }
 
+    console.log(window.innerWidth)
 
     return (
     <div className='resume-container'>
-        <h1>Resume</h1>
-        <embed className="resume" style={{}} src={MyResume} width='600px' height='800px'></embed>
-        <h2>Certificates</h2>
+        <h1 style={{fontSize: "66px", marginTop: "0"}}>RESUME</h1>
+        <div className="resume" >
+        <iframe src={`${MyResume}`} title='Resume' width="600px" height="800px"></iframe>
+        </div>
+        <h2>CERTIFICATES</h2>
         <div className="certificates">
-            <Document onClick={() => openModal(GA, null, 800)} className="cert" file={GA}><Page height={446} pageNumber={1} /></Document>
+            <Document onClick={() => openModal(GenAss, null, 800)} className="cert" file={GenAss}><Page height={446} pageNumber={1} /></Document>
             <Document onClick={() => openModal(ReactCert, 800, null)} className="cert" file={ReactCert}><Page width={600} pageNumber={1} /></Document>
         </div>
         <Modal clicked={() => closeModal()} display={modalDisplay}><Document className="modal" file={cert.file}><Page width={cert.width} height={cert.height} pageNumber={1} /></Document></Modal>

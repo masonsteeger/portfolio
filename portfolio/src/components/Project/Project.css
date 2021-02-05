@@ -1,4 +1,3 @@
-
 .project{
     width: 580px;
     height: 340px;
@@ -9,28 +8,90 @@
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 0 20px black;
-    cursor: pointer;
 }
 
 .hover-text{
     font-size: 48px;
-    background-color: rgba(197, 197, 197, 0.7);
+    color: #FFE0B5;
+    background-color: rgba(11, 79, 108, 0.7);
     height:100%;
     border-radius: 18px;
     overflow: hidden;
-    animation: slideIn .3s linear ;
+    animation: slideIn .3s linear;
 }
 
-.title{
+.title-1{
     margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: rgba(131, 34, 50, .7);
+    animation: growTitle .3s .3s linear;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
+
+.title-1:hover{
+    margin: 0;
+    cursor: pointer;
+}
+
 .description {
+    margin:0;
     font-size: 28px;
     margin: 10px;
 }
 
-.hover-text:hover {
-    cursor: pointer;
+.description:hover{
+    cursor:default;
+}
+
+
+@media only screen and (max-width: 768px){
+    .project{
+        width: 480px;
+        height: 240px;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 2% 2%;
+        margin-bottom: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 0 20px black;
+    }
+    
+    .hover-text{
+        font-size: 28px;
+        color: #FFE0B5;
+        background-color: rgba(11, 79, 108, 0.7);
+        height:100%;
+        border-radius: 18px;
+        overflow: hidden;
+        animation: slideIn .3s linear;
+    }
+    
+    .title-1{
+        margin: 0px 0px;
+        padding: 0px 0px;
+        background-color: rgba(131, 34, 50, .7);
+        animation: growTitle .3s .3s linear;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+    }
+    
+    .title-1:hover{
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    .description {
+        margin:0;
+        font-size: 18px;
+        margin: 10px;
+    }
+    
+    .description:hover{
+        cursor:default;
+    }
 }
 
 
@@ -41,5 +102,14 @@
     }
     100%{
         height: 100%;
+    }
+}
+
+@keyframes growTitle {
+    50%{
+        transform:scale(1.1,1.1);
+    }
+    100%{
+        transform:scale(1,1);
     }
 }

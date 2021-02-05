@@ -1,31 +1,35 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { AppBar, Tabs, Tab, makeStyles } from '@material-ui/core';
 import * as Scroll from 'react-scroll';
-import './Navbar.css'
 
 const scroller = Scroll.scroller;
-const Events = Scroll.Events
+
+const useStyle = makeStyles({
+    indicator: {
+      backgroundColor: "#FFE0B5",
+      top: "0px"
+    }
+  });
 
 const Navbar = (props) => {
+    const classes = useStyle();
 
     const navScroll = (value) => {
         scroller.scrollTo(value, {
             duration: 1500,
             delay: 100,
-            smooth: 'easeInOutQuart',
-            offset: -70,
+            smooth: 'easeOutQuad',
+            offset: -56,
         })
     }
 
     return (
-        <AppBar>
-            <Tabs value={props.page}>
-                <Tab onClick={() => navScroll('home')} label='home' value='home' />
-                <Tab onClick={() => navScroll('projects')} label='projects' value='projects'/>
-                <Tab onClick={() => navScroll('bio')} label='bio' value='bio'/>
-                <Tab onClick={() => navScroll('resume')} label='resume' value='resume'/>
+        <AppBar style={{backgroundColor: "#0B4F6C"}}>
+            <Tabs classes={{indicator: classes.indicator}} value={props.page} centered>
+                <Tab style={{color: "#FFE0B5", fontWeight: "bold"}} onClick={() => navScroll('home')} label='home' value='home' />
+                <Tab style={{color: "#FFE0B5", fontWeight: "bold"}} onClick={() => navScroll('projects')} label='projects' value='projects'/>
+                <Tab style={{color: "#FFE0B5", fontWeight: "bold"}} onClick={() => navScroll('bio')} label='bio' value='bio'/>
+                <Tab style={{color: "#FFE0B5", fontWeight: "bold"}} onClick={() => navScroll('resume')} label='resume' value='resume'/>
             </Tabs>
         </AppBar>
     );

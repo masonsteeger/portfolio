@@ -15,18 +15,20 @@ const App = (props) => {
   useEffect(() => {
     function handleScroll(e) {
       const y = window.scrollY
-      console.log(y)
+      const projectY = document.getElementById('projects').getBoundingClientRect().y
+      const bioY = document.getElementById('bio').getBoundingClientRect().y
+      const resumeY = document.getElementById('resume').getBoundingClientRect().y
       switch(true){
-        case y < 540 && page !== 'home':
+        case y < 200 && page !== 'home':
           setPage('home')
           break;
-        case 540 < y && y < 1724 && page !== 'projects':
+        case projectY < 200 && projectY > -600 && page!== 'projects':
           setPage('projects');
           break;
-        case 1724 < y && y < 2712 && page !== 'bio':
+        case bioY < 200 && bioY > -600 && page !== 'bio':
           setPage('bio')
           break;
-        case 2717 < y && page !== 'resume':
+        case resumeY < 200 && page !== 'resume':
           setPage('resume')
           break;
         default:
