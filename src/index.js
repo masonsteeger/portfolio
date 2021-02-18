@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <App onScroll={() => console.log('scrolling')}/>,
+    <App />,
   document.getElementById('root')
 );
 
